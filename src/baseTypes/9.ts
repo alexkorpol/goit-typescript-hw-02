@@ -7,18 +7,14 @@ type page =  {
   likes: number,
   accounts: string[],
   status: 'open' | 'close' 
-}
-
-type dateCreateAndUpdate = {
-  details: {
-   createAt: Date,
-   updateAt: Date,
+  details?: {
+    createAt: Date,
+    updateAt: Date,
   }
 }
 
-type pageExtend = page & dateCreateAndUpdate;
 
-const page1: pageExtend  = {
+const page1: page  = {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],

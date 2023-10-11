@@ -13,12 +13,8 @@ enum weekDay {
   SUNDAY,
 }
 
-function isWeek(weekDay): boolean {
-  let weekend: boolean = false;
-  if (weekDay === 'SATURDAY' || weekDay === 'SUNDAY') {
-    weekend = true
-  }
-  return weekend
+function isWeek(day: weekDay): boolean {
+  return day === weekDay.SATURDAY || day === weekDay.SUNDAY; 
 }
 
 isWeek(weekDay.MONDAY)
